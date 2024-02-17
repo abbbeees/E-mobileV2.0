@@ -1,0 +1,27 @@
+<div class="cont">
+
+    <div class="card-container">
+        <div style="display: flex; align-items:center;justify-content:center;">
+            <a class="homebtn" routerLink="/homep"><mat-icon>home</mat-icon></a>
+          </div>
+        <div class="form-group">
+          <label for="source">Problem title</label>
+          <input type="text" class="form-control" id="source" name="source" [(ngModel)]="formData.source" required>
+        </div>
+
+      <form (ngSubmit)="onSubmit()" #problemForm="ngForm" class="container mt-4">
+        <div class="form-group">
+          <label for="description">Problem description</label>
+          <textarea class="form-control" id="description" name="description" [(ngModel)]="formData.description" required></textarea>
+        </div>
+      
+        <div class="form-group" style="margin-top: 25px; margin-bottom:25px">
+          <label for="images">Download image</label>
+          <input type="file" class="form-control-file" id="images" name="images" accept="image/*" (change)="onFileSelected($event)" multiple>
+        </div>
+      
+        <button type="submit" class="btn btn-primary" [disabled]="!problemForm.valid">submit</button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,40 @@
+<div style="display: flex; align-items:center;justify-content:center;">
+  <a class="homebtn" routerLink="/homep"><mat-icon>home</mat-icon></a>
+</div>
+
+<div class="panier">
+  <h4>Votre Panier</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Nom</th>
+        <th>Quantité</th>
+        <th>Prix unitaire</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of articles">
+        <td class="imagecont">
+          <img [src]="article.image" alt="{{ article.nom }}">
+        </td>
+        <td>{{ article.nom }}</td>
+        <td>{{ article.quantite }}</td>
+        <td>{{ article.prix }} $</td>
+        <td>{{ article.quantite * article.prix }} $</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" style="font-size: large;">Subtotal</td>
+        <td style="font-size: large;">{{ calculerTotal() }} $</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="pay">
+    <button type="button" class="btn btn-success" id="abcde">Confirm</button>
+  </div>
+</div>

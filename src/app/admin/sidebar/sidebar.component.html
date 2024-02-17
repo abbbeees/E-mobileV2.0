@@ -1,0 +1,8 @@
+<div class="sidebar" [ngClass]="{'sidebar-open': isSidebarOpen, 'sidebar-closed': !isSidebarOpen}">
+    <button class="toggle-button" (click)="toggleSidebar()"><mat-icon>menu</mat-icon></button>
+    <div style="height:75px;"></div>
+    <button routerLink="/admin">Dashboard</button>
+    <button routerLink="/Mhome">Home Settings</button>
+    <button routerLink="/allprod">Products</button>
+    <button>Settings</button>
+  </div>

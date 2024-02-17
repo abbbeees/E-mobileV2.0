@@ -1,0 +1,56 @@
+/* product-filter.component.scss */
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+  }
+  
+  .filter-section {
+    width: 48%; /* Ajustez la largeur selon vos préférences */
+    margin-bottom: 20px;
+  }
+  
+  h4 {
+    margin-bottom: 10px;
+  }
+  
+  .filter-section select {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  .range-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .range-bar input {
+    width: 80%;
+  }
+  
+  .range-bar span {
+    width: 18%;
+    text-align: right;
+  }
+  
+  #bttn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+  }
+
+  #bttnn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

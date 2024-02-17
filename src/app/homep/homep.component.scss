@@ -1,0 +1,460 @@
+*{
+  font-size: 17px;
+}
+p{
+  font-size: 15px;
+  font-weight: bold;
+}
+body {
+  height: auto;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  padding-bottom: 15px;
+}
+
+.left-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainnav {
+  flex: 1;
+  background-color: #ECE2D0;
+  display: flex;
+  justify-content: flex-start; /* Keep the logo on the left */
+  align-items: center; /* Center the content vertically */
+}
+
+.logo {
+  width: 25%;
+  height: auto;
+}
+
+.searchbar {
+  flex: 1; /* Take up remaining space to push the search bar to the middle */
+  /* Style your search bar here */
+  display: flex;
+  justify-content: center; /* Center the search bar content horizontally */
+}
+
+// .categorienav {
+//   display: flex;
+//   flex: 1;
+//   justify-content: center;
+//   background-color: #ECE2D0;
+// }
+
+.right-div {
+  flex: 0 0 1%;
+  background-color: #ECE2D0;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  display: flex;
+  flex: 1;
+  width: 40px;
+  height: 40px;
+  background-color: #d7c8ac;
+  color: #6a4b38;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+// #horizontal-list {
+//   width: 70%;
+//   list-style: none; /* Removes the bullet points */
+//   padding: 0; /* Removes default padding */
+//   display: flex; /* Use flexbox for centering and spacing */
+//   justify-content: space-around;
+// }
+
+// #horizontal-list li {
+//   display: inline; /* Makes the list items inline */
+//   margin-right: -15px;
+// }
+
+
+// .dropdown {
+//   position: relative;
+//   cursor: pointer;
+// }
+
+// .dropdown-content {
+//   display: none;
+//   position: absolute;
+//   background-color: #f9f9f9;
+//   min-width: 160px;
+//   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+//   z-index: 1;
+//   text-align: left;
+//   background-color: #ECE2D0;
+// }
+
+// .dropdown:hover .dropdown-content {
+//   display: block;
+// }
+
+// .dropdown-content a {
+//   display: flex; /* Display each anchor on a new line */
+//   align-items: center;
+//   justify-content: center;
+//   padding: 5px; /* Add padding to style the anchors */
+//   text-decoration: none; /* Remove underlines from links */
+// }
+
+.nav-list {
+  list-style: none;
+}
+// navbar css ending
+
+  
+  .rectangle {
+    position: flex;
+    justify-content: center;
+  }
+
+  /* app.component.css */
+/* app.component.css */
+.cat-container {
+  display: flex;
+  height: 50vh;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 250px;
+  margin-bottom: 155px;
+}
+
+.leftC, .rightC {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box; 
+}
+.leftC{
+  margin-right: 7px;
+}
+.rightC{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 100%;
+  box-sizing: border-box;
+  margin-left: 8px;
+}
+
+#child1, #childd2, .child2-1, .child2-2{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.child3, .child4 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+#childd2 {
+  display: flex;
+  flex-direction: row; /* Display children horizontally */
+}
+
+.child2-1, .child2-2 {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+.child3, .child4{
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  margin: 15px;
+}
+
+#child1 {
+  background-image: url('../../assets/image/categories/phone.png');
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+ 
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child2-1{
+  background-image: url('../../assets/image/categories/case.png');
+}
+
+.child2-2 {
+  background-image: url('../../assets/image/categories/solding.png');
+}
+
+.child3 {
+  min-height: 80vh;
+  background-image: url('../../assets/image/categories/accessoire1.png');
+}
+
+.child4 {
+  min-height: 80vh;
+  background-image: url('../../assets/image/categories/glass.jpg');
+}
+#child1, #child2{
+  margin: 15px;
+}
+.child2-1{
+  margin-right: 8px;
+}
+.child2-2{
+  margin-left: 7px;
+}
+
+#child1, .child2-1, .child2-2, .child3, .child4 {
+  border: 1px solid black;
+  border-radius: 35px;
+}
+.b2bcont{
+height: 75%;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #ECE2D0 ;
+margin-top: -75px;
+}
+
+.b2bright, .b2bleft{
+  background-color: white ;
+  flex: 1;
+  margin: 15px;
+  height: 155px;
+  width: 555px;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b2bleft:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.b2bright:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+// categories animations
+
+#child1:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.child1:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.child2-1:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.child2-2:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.child3:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.child4:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative; 
+  z-index: 1; 
+  background-image: url('../../assets/image/check.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 15px;
+  margin-left: -15px;
+}
+.example-card {
+  width: 250px;
+  height: auto;
+}
+.all-products-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6a4b38;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+
+//footer scss
+
+.footer {
+  margin: 0;
+  margin-top: 150px;
+  font-family: Arial, sans-serif;
+  background-color: wheat;
+}
+
+.footbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column; /* Display items in a column */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Add margin between items */
+}
+
+.contact-info mat-icon {
+  margin-right: 8px; /* Add space between icon and text */
+}
+
+.left-side a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px; /* Add margin between items */
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column; /* Display items in a column */
+}
+
+.location {
+  margin-bottom: 8px; /* Add margin between items */
+}
+
+// .horizontal-line {
+//   border: 1px solid #000; /* Change the color and style as needed */
+//   margin: 20px 0; /* Adjust the margin as needed */
+// }
+
+.carouscont{
+  height: 300px;
+  margin-top: 25px;
+  position: relative; /* Add position: relative */
+  z-index: 0; /* Set a z-index for the carousel */
+}
+
+.categorienav {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  background-color: #ECE2D0;
+  position: relative; /* Add relative positioning */
+  z-index: 1;
+}
+
+#horizontal-list {
+  width: 70%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+#horizontal-list li {
+  display: inline;
+  margin-right: -15px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Increase the z-index value */
+  text-align: left;
+  background-color: #ECE2D0;
+  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  text-decoration: none;
+  z-index: 1;
+}

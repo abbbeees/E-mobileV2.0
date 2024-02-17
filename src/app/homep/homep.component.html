@@ -1,0 +1,197 @@
+<div class="bbd" style="width: 100%;">
+  <div class="container">
+      <div class="left-div">
+          <div class="mainnav">
+  
+              <div class="logo-place" routerLink="/homep">
+                  <img src="../../assets/image/logo.png" class="logo">
+              </div>
+  
+              <div class="searchbar">
+                  <div class="input-group rounded" style="width: 50%;">
+                      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                      <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                    </div>
+              </div>
+          </div>
+          <div class="categorienav">
+              <ul id="horizontal-list">
+                  <li class="dropdown">Iphone
+                      <div class="dropdown-content">
+                          <a routerLink="/products">Iphone  14</a>
+                          <a routerLink="/products">Iphone  14 ProMax</a>
+                          <a routerLink="/products">Iphone  13</a>
+                          <a routerLink="/products">Iphone  13 ProMax</a>
+                      </div>
+                  </li>
+                  <li class="dropdown">Samsung
+                      <div class="dropdown-content">
+                          <a routerLink="/products">Samsung S23 ultra</a>
+                          <a routerLink="/products">Samsung S23</a>
+                          <a routerLink="/products">Samsung S22 ultra</a>
+                          <a routerLink="/products">Samsung S22</a>
+                      </div>
+                  </li>
+                  <li class="dropdown">Oppo
+                      <div class="dropdown-content">
+                          <a routerLink="/products">OPPO Find N3</a>
+                          <a routerLink="/products">OPPO Find N3 Flip</a>
+                          <a routerLink="/products">OPPO Find X5 Pro</a>
+                          <a routerLink="/products">OPPO Find X5</a>
+                          <a routerLink="/products">OPPO Reno8 T 5G</a>
+                      </div>
+                  </li>
+                  <li><div routerLink="/products">Accessoires</div></li>
+                  <li><div routerLink="/aboutus">About us</div></li>
+              </ul>
+          </div>
+      
+      </div>
+      <div class="right-div">
+          <div class="line" style="background-color: black; color:black;">!</div>
+          <ul class="nav-list">
+            <li class="dropdown">
+              <div class="circle"><img src="../../assets/image/icons/user-circle.svg">
+              <div class="dropdown-content">
+                <a (click)="openlogin()" style="color: rgb(72, 72, 255);">Login</a>
+                <a routerLink="/registration">Registration</a>
+              </div>
+            </div>
+          
+            </li>
+            <li><div class="circle" routerLink="/panier"><img src="../../assets/image/icons/shop.svg"></div></li>
+          </ul>
+        </div>
+        </div>
+   
+  </div>
+ 
+
+    <!-- carrousel Code -->
+<div class="carouscont">  
+
+    <igx-carousel #carouselExample>
+      <igx-slide *ngFor="let item of carous">
+        <img [src]="item.image" class="d-block w-100" alt="Slide">
+      </igx-slide>
+    </igx-carousel>
+    
+</div>    
+  
+  <!-- Horizontal line -->
+  <!-- <hr class="horizontal-line"> -->
+ 
+  <div class="cat-container">
+    <div class="leftC">
+      
+      <div id="child1" routerLink="/products">
+        <div class="ch1">
+          <p class="txtan" style="margin-left: 5px;color:blue;"></p>
+        </div>
+      </div>
+
+      <div id="childd2">
+        <div class="child2-1" routerLink="/tryybck">
+          <p class="txtan" style="margin-left: 5px;color:red;height:155px"></p>
+      </div>
+        <div class="child2-2" style="position: relative;" routerLink="/solding">
+
+      </div>
+      </div>
+
+    </div>
+    <div class="rightC">
+      <div class="child3" style="position: relative;" routerLink="/products">
+
+      </div>
+
+      <div class="child4" style="position: relative;" routerLink="/products">
+
+      </div>
+      
+    </div>
+   </div>
+
+
+
+   <!--  b2b section -->
+   <div class="b2bcont">
+    <div class="b2bmaroon" style="background-color: #6A4B38 ;display: flex; border-radius:35px;">
+      <div class="b2bright">
+        <div style="text-align: center;">
+            <i class="fa-solid fa-users fa-xl" style="color: #6a4b38; display: block;"></i>
+            <p><strong>B2B</strong><br>Description</p>
+        </div>
+    </div>
+    
+
+    <div class="b2bleft">
+      <div style="text-align: center;">
+          <i class="fa-solid fa-user fa-xl" style="color: #6a4b38; display: block;"></i>
+          <p><strong>Simple user</strong><br>Description</p>
+      </div>
+  
+    </div>
+   </div>
+  </div>
+
+
+
+  <div class="prodsection">
+    <!-- Your content for the specific section goes here -->
+</div>
+<div class="test">
+  <h4> Check our products</h4>
+  <div class="card-container">
+    <mat-card class="example-card">
+      <img mat-card-image src="https://c0.lestechnophiles.com/www.frandroid.com/wp-content/uploads/2023/01/samsung-galaxy-s23-ultra-frandroid-2023.png?avif=1&key=05a3a6ac" alt="Photo of a Shiba Inu">
+    </mat-card>
+  
+    <mat-card class="example-card">
+      <img mat-card-image src="https://c0.lestechnophiles.com/images.frandroid.com/wp-content/uploads/2023/05/google-pixel-7a-frandroid-2023-1-768x768.png?avif=1&key=6f28dc03" alt="Photo of a Shiba Inu">
+    </mat-card>
+  
+    <mat-card class="example-card">
+      <img mat-card-image src="https://c0.lestechnophiles.com/www.frandroid.com/wp-content/uploads/2023/01/samsung-galaxy-s23-ultra-frandroid-2023.png?avif=1&key=05a3a6ac" alt="Photo of a Shiba Inu">
+    </mat-card>
+  
+    <mat-card class="example-card">
+      <img mat-card-image src="https://c0.lestechnophiles.com/images.frandroid.com/wp-content/uploads/2023/05/google-pixel-7a-frandroid-2023-1-768x768.png?avif=1&key=6f28dc03" alt="Photo of a Shiba Inu">
+    </mat-card>
+
+  </div>
+  <div class="all-products-button">
+    <button routerLink="/products" type="button" class="btn btn-light">All products</button>
+  </div>
+</div>
+   <!-- <div class="bottomspacer" style="margin-bottom: 55px;"></div> -->
+
+
+   <!-- footer start-->
+   <div class="footer">
+    <footer class="footbar">
+    <div class="left-side">
+      <div class="contact-info">
+         
+        <a href="mailto:abbbeees@gmail.com"><i class="fab fa-google f" style="color: #dd4b39;"></i> - Contact us on Gmail.</a>
+      </div>
+
+      <div class="contact-info">
+       <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" style="color: #3b5998;"></i> - Visit our Facebook page.</a>
+    </div>
+    <div class="contact-info">
+         <a href="https://www.instagram.com/"><i class="fab fa-instagram f" style="color: #ac2bac;"></i> - Visit our Instagram profile.</a>
+    </div>
+    </div>
+
+    <div class="right-side">
+      <div class="location">Location 1 - <i class="fas fa-map-marker-alt" style="color: #dd4b39;"></i></div>
+      <div class="location">Location 2 - <i class="fas fa-map-marker-alt" style="color: #dd4b39;"></i></div>
+    </div>
+  </footer>
+    <div class="ft" style="display:flex; align-items:center;justify-content:center;">
+        <h5>Copy rights : blabla dev center  •  Tunis, Tunisia, Benarous</h5>
+    </div>
+</div>

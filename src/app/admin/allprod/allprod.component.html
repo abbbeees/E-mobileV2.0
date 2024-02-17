@@ -1,0 +1,49 @@
+<div class="admin-container">
+    <app-sidebar></app-sidebar>
+
+<div class="content-container">
+
+        <mat-form-field class="example-full-width">
+            <span matPrefix> </span>
+            <input matInput placeholder="Search" type="text" [(ngModel)]="searchText">
+            <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+            </mat-form-field>
+
+        <button id="adbtn" mat-button color="primary" (click)="addProducts()">Add Products</button>
+        
+
+        <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of data | search: searchText">
+                <td>{{ product.id }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
+                <td class="action-icons">
+                    <button mat-icon-button color="primary" (click)="updateProduct(product)">
+                        <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" (click)="deleteProduct(product.id)">
+                        <mat-icon>delete</mat-icon>
+                        </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+    
+</div>
+</div>
+
+

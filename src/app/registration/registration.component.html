@@ -1,0 +1,97 @@
+<div class="container">
+  <div style="display: flex; align-items:center;justify-content:center;">
+  <a class="homebtn" routerLink="/homep"><mat-icon>home</mat-icon></a>
+</div>
+    <div class="left-side">
+      <form [formGroup]="profileForm" class="form-container">
+        <mat-card style="background-color: #ECE2D0; padding-right:10px;">
+          <mat-card-header>
+            <mat-card-title>Profile Information</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>FirstName</mat-label>
+                  <input formControlName="firstName" matInput>
+                </mat-form-field>
+              </div>
+  
+              <div class="col-md-6">
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>LastName</mat-label>
+                  <input formControlName="lastName" matInput>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <mat-form-field>
+              <mat-label>Enter your email</mat-label>
+              <input matInput placeholder="Myaccount@mail.com" [formControl]="email" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            
+                          
+            <div class="row">
+              <div class="col-md-12">
+                <mat-form-field>
+                  <mat-label>Enter your password</mat-label>
+                  <input matInput [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>Birthday</mat-label>
+                  <input formControlName="dob" matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <mat-form-field class="full-width" appearance="fill">
+                  <textarea formControlName="address" matInput placeholder="Address"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+              
+            <div class="row">
+              <div class="col-md-12">
+                <mat-radio-group formControlName="gender" class="margin-left">
+                  <mat-radio-button value="male"> Male </mat-radio-button>
+                  <mat-radio-button value="female"> Female </mat-radio-button>
+                  <mat-radio-button value="other"> Other </mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+            <div class="btns">
+              <a routerLink="/navbar"><button (click)="saveForm()" mat-raised-button class="color-button1">Register</button></a>
+              <hr class="line">
+              <button (click)="connectWithGoogle()" mat-raised-button color="primary">Connect with Google</button>
+            </div>
+            
+          </mat-card-actions>
+          
+        </mat-card>
+      </form>
+    </div>
+  
+    <div class="right-side">
+      <div class="image-container">
+        <img src="../../assets/image/register.png" alt="Registration Image" >
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,68 @@
+<div class="bbd" style="width: 100%;">
+    <div class="container">
+        <div class="left-div">
+            <div class="mainnav">
+    
+                <div class="logo-place" routerLink="/homep">
+                    <img src="../../assets/image/logo.png" class="logo">
+                </div>
+    
+                <div class="searchbar">
+                    <div class="input-group rounded" style="width: 50%;">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                </div>
+            </div>
+            <div class="categorienav">
+                <ul id="horizontal-list">
+                    <li class="dropdown">Iphone
+                        <div class="dropdown-content">
+                            <a routerLink="/products">Iphone  14</a>
+                            <a routerLink="/products">Iphone  14 ProMax</a>
+                            <a routerLink="/products">Iphone  13</a>
+                            <a routerLink="/products">Iphone  13 ProMax</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">Samsung
+                        <div class="dropdown-content">
+                            <a routerLink="/products">Samsung S23 ultra</a>
+                            <a routerLink="/products">Samsung S23</a>
+                            <a routerLink="/products">Samsung S22 ultra</a>
+                            <a routerLink="/products">Samsung S22</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">Oppo
+                        <div class="dropdown-content">
+                            <a routerLink="/products">OPPO Find N3</a>
+                            <a routerLink="/products">OPPO Find N3 Flip</a>
+                            <a routerLink="/products">OPPO Find X5 Pro</a>
+                            <a routerLink="/products">OPPO Find X5</a>
+                            <a routerLink="/products">OPPO Reno8 T 5G</a>
+                        </div>
+                    </li>
+                    <li><div routerLink="/products">Accessoires</div></li>
+                    <li><div routerLink="/aboutus">About us</div></li>
+                </ul>
+            </div>
+        
+        </div>
+        <div class="right-div">
+            <div class="line" style="background-color: black; color:black;">!</div>
+            <ul class="nav-list">
+              <li class="dropdown">
+                <div class="circle"><img src="../../assets/image/icons/user-circle.svg">
+                <div class="dropdown-content">
+                    <a (click)="openlogin()" style="color: rgb(72, 72, 255);">Login</a>
+                  <a routerLink="/registration">Registration</a>
+                </div></div>
+            
+              </li>
+              <li><div class="circle" routerLink="/panier"><img src="../../assets/image/icons/shop.svg"></div></li>
+            </ul>
+          </div>
+          </div>
+    
+    </div>

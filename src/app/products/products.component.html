@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+<div class="thbody">
+<div class="filter-container">
+    <div class="filter-outside">
+        
+        <div class="filter-inside">
+            <div class="path" style="margin-top: 7px;">
+                Products
+            </div>
+
+            <div class="filter">
+                <!-- <a (click)="openFilterPopup()" class="btn" id="btntn" data-toggle="modal">Filter</a> -->
+                <button (click)="openFilterPopup()" style="padding-left: 45px; padding-right:45px; margin-bottom: 20px; position: relative; z-index: 0" mat-button color="Basic">Filter</button>
+            </div>
+
+            <div class="search">
+                <div class="searchbar">
+                    <div class="input-group rounded" style="width: 50%;">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="searchText">
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                </div>
+            </div>
+
+            <div class="plus" style="margin-top: 7px;">
+                +
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pub" style="margin-bottom: 15px;">
+
+</div>
+
+<div class="container page-wrapper" style="margin-bottom: 45px;">
+    <div class="page-inner">
+      <div class="row">
+
+
+<div class="el-wrapper" style="border-radius: 35px;" *ngFor="let product of products| search: searchText">
+  <div class="box-up">
+    <img class="img" [src]="product.img" alt="">
+    <div class="img-info">
+      <div class="info-inner">
+        <span class="p-name">{{ product.name }}</span>
+        <span class="p-company">{{ product.company }}</span>
+        <span><button (click)="opendetails(product)" style="background-color: yellow; color:black; border-radius:25px">More details ►</button></span>
+      </div>
+      <div class="a-size">Available : <span class="size">{{ product.storage }}</span></div>
+    </div>
+  </div>
+
+  <div class="box-down">
+    <div class="h-bg">
+      <div class="h-bg-inner"></div>
+    </div>
+
+    <a class="cart">
+      <span class="price">${{ product.price }}</span>
+      <span class="add-to-cart">
+        <span class="txt">Add to cart</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="pubc" style="display: flex; flex-direction: column; align-items: center;">
+    <img src="../../assets/image/caseds.png" style="margin-bottom: 10px;">
+    <button type="button" class="btn btn-warning">Let's Go !</button>
+</div>
+
+</div>
+
+<app-footbar></app-footbar>

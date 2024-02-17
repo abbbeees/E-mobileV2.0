@@ -1,0 +1,32 @@
+<div class="admin-container">
+    <app-sidebar></app-sidebar>
+    <div class="content-container">
+      <div class="headerdiv">
+        <div class="little-div"></div>
+        <div class="little-div"></div>
+        <div class="little-div"></div>
+        <div class="little-divx"></div>
+      </div>
+      <div class="full-width-div"></div>
+      <div class="two-divs-container">
+        <div class="left-div"></div>
+        <div class="right-div">
+            <h2>Todo List</h2>
+            <input [(ngModel)]="newTodo" placeholder="Add a new todo" />
+            <button (click)="addTodo()" type="button" class="btn btn-dark">Add</button>
+            <ul>
+              <li *ngFor="let todo of todos; let i = index">
+                <mat-checkbox [(ngModel)]="todo.completed" (change)="updateTodoStatus(i, todo.completed)">
+                  {{ todo.text }}
+                </mat-checkbox>
+                <button mat-icon-button color="warn" (click)="removeTodo(i)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+  

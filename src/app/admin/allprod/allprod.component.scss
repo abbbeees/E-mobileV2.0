@@ -1,0 +1,36 @@
+.admin-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .mat-elevation-z8 {
+    width: 100%;
+    height: auto;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .button-container {
+    margin-left: auto;
+    margin-bottom: 15px;
+  }
+  
+  #adbtn{
+    margin-bottom: 35px;
+    background-color: lightblue;
+  }

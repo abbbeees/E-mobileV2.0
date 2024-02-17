@@ -1,0 +1,42 @@
+<!-- product-form.component.html -->
+<div class="product-form-container">
+    <h4 style="background-color: beige;">update Product</h4>
+    <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" [(ngModel)]="product.name" required>
+  
+      <label for="productCategory">Product Category:</label>
+      <select id="productCategory" name="productCategory" [(ngModel)]="product.category" required>
+        <option value="category1">Smarthphone</option>
+        <option value="category2">accessoire</option>
+        <option value="category3">Glass</option>
+        <option value="category3">Cases</option>
+        <!-- Add more categories as needed -->
+      </select>
+  
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" [(ngModel)]="product.quantity" required>
+  
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" step="0.01" [(ngModel)]="product.price" required>
+  
+      <label for="productCompany">Product Company:</label>
+      <input type="text" id="productCompany" name="productCompany" [(ngModel)]="product.company" required>
+      
+      <label for="productStorage">Product Storage:</label>
+      <input type="text" id="productStorage" name="productStorage" [(ngModel)]="product.storage" required>
+  
+      <label for="productDescription">Product Description:</label>
+      <textarea id="productDescription" name="productDescription" [(ngModel)]="product.description" required></textarea>
+  
+      <label for="productImage">Product Image:</label>
+      <input type="file" id="productImage" name="productImage" (change)="onFileSelected($event)" accept="image/*">
+  
+  
+      <div style="display: flex; justify-content:center; align-items:center;">
+        <button style="border-radius: 25px; padding-left: 25px; padding-right: 25px;" type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+  

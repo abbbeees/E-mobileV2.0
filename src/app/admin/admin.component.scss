@@ -1,0 +1,59 @@
+.admin-container {
+    display: flex;
+    height: auto;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .headerdiv {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  .little-div {
+    flex-grow: 1;
+    background-color: lightblue;
+    height: 100px;
+    margin-right: 10px;
+  }
+  .little-divx {
+    flex-grow: 1;
+    background-color: lightblue;
+    height: 100px;
+  }
+  
+  .full-width-div {
+    width: 100%;
+    height: 450px;
+    background-color: lightcoral;
+    /* Add other styles for full-width-div if needed */
+    margin-bottom: 25px; /* Add margin to separate it from the next container */
+  }
+  
+  .two-divs-container {
+    display: flex;
+  }
+  
+  .left-div,
+  .right-div {
+    flex: 1;
+    height: auto; /* Adjust the height as needed */
+  }
+  
+  .left-div {
+    background-color: lightgreen;
+  }
+  
+  .right-div {
+    background-color: lightskyblue;
+    margin-left: 25px; /* Add margin between the two divs */
+    padding: 15px;
+  }
+  

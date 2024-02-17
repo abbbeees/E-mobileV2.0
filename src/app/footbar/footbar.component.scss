@@ -1,0 +1,45 @@
+.footer {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+  }
+  
+  .footbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-side {
+    display: flex;
+    flex-direction: column; /* Display items in a column */
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Add margin between items */
+  }
+  
+  .contact-info mat-icon {
+    margin-right: 8px; /* Add space between icon and text */
+  }
+  
+  .left-side a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px; /* Add margin between items */
+  }
+  
+  .right-side {
+    display: flex;
+    flex-direction: column; /* Display items in a column */
+  }
+  
+  .location {
+    margin-bottom: 8px; /* Add margin between items */
+  }
+  

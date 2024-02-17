@@ -1,0 +1,33 @@
+.admin-container {
+    display: flex;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+  }
+
+.content-container{
+  margin-left: 75px;
+}
+
+// .impProd {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//   height: 200px;
+//   width: 1000px;
+// }
+
+.example-card {
+  width: 100px; /* Set a fixed width for the cards or adjust as needed */
+  margin: 10px; /* Adjust margin as needed for spacing between cards */
+}
+
+.card-container{
+  width: 1000px;
+  height: 250px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+#position{
+  margin-bottom: 15px;
+}

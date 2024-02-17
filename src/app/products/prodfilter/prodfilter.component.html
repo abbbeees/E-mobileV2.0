@@ -1,0 +1,82 @@
+<!-- product-filter.component.html -->
+
+<div class="filter-container" id="cnt">
+    <h3>Product Filters</h3>
+  
+    <!-- Price Range Filter -->
+    <div class="filter-section">
+
+      <h5>Price Range</h5>
+  <!-- Min Price Range Bar -->
+  <div>
+    <label for="minP">Min Price</label>
+    <input type="range" id="minP" name="minP" [(ngModel)]="minPrice" min="0" max="9999" step="10" />
+  </div>
+  <!-- Max Price Range Bar -->
+  <div>
+    <label for="maxP">Max Price</label>
+    <input type="range" id="cowbell" name="maxP" [(ngModel)]="maxPrice" min="10" max="10000" value="100" step="10" />
+  </div>
+  <span>{{ minPrice }}$ - {{ maxPrice }}$</span>
+    
+    </div>
+  
+    <!-- Category Filter -->
+    <div class="filter-section">
+      <h5>Category</h5>
+      <select [(ngModel)]="selectedCategory">
+        <option value="category1">Samartphone</option>
+        <option value="category2">accessoires</option>
+        <option value="category2">glasses</option>
+        <!-- Add more categories as needed -->
+      </select>
+    </div>
+  
+<!-- Brand Filter -->
+<div class="filter-section">
+    <h5>Brand</h5>
+    <select [(ngModel)]="selectedBrand">
+      <option value="apple">Apple</option>
+      <option value="samsung">Samsung</option>
+      <option value="huawei">Huawei</option>
+      <option value="xiaomi">Xiaomi</option>
+      <option value="oneplus">OnePlus</option>
+      <option value="google">Google</option>
+      <option value="lg">LG</option>
+      <option value="sony">Sony</option>
+      <option value="nokia">Nokia</option>
+      <option value="motorola">Motorola</option>
+      <!-- Add more brands as needed -->
+    </select>
+  </div>
+  
+  
+    <!-- Storage Filter -->
+    <div class="filter-section">
+      <h5>Storage</h5>
+      <select [(ngModel)]="selectedStorage">
+        <option value="128GB">128GB</option>
+        <option value="256GB">256GB</option>
+        <option value="512GB">512GB</option>
+        <option value="1TB">1TB</option>
+        <option value="2TB">2TB</option>
+      </select>
+    </div>
+  
+    <!-- RAM Filter -->
+    <div class="filter-section">
+      <h5>RAM</h5>
+      <select [(ngModel)]="selectedRAM">
+        <option value="4GB">4GB</option>
+        <option value="8GB">8GB</option>
+        <option value="16GB">16GB</option>
+        <option value="32GB">32GB</option>
+      </select>
+    </div>
+  
+
+  </div>
+    <!-- Apply Button -->
+    <div class="filter-section" id="bttn">
+      <button (click)="applyFilters()" id="bttnn" mat-raised-button color="primary">Filter</button>
+    </div>  

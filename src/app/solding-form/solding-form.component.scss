@@ -1,0 +1,30 @@
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; // Ajoutez ceci pour centrer verticalement sur toute la hauteur de la vue
+  }
+  
+  .card-container {
+    width: 700px; // Ajustez la largeur de la carte selon vos besoins
+    padding: 20px;
+    box-shadow: 15px 15px 8px rgba(0, 0, 0, 0.1); // Ajoutez une ombre à la carte pour la mettre en évidence
+    background-image: url('../../assets/image/bckimg/loginbck.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 25px;
+  }
+
+  .homebtn{
+    
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border: 2px solid #825c44;
+    border-radius: 20px;
+    height: 40px;
+    width: 80px;
+    background-color: #6a4b38;
+    margin-top: 15px;
+}
