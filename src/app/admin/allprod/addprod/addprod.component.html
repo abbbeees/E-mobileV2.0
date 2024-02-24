@@ -4,22 +4,22 @@
   <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
 
     <label for="productName">Product Name:</label>
-    <input type="text" id="productName" name="productName" [(ngModel)]="product.name" required>
+    <input type="text" id="productName" name="productName" [(ngModel)]="product.productName" required>
 
     <label for="productCategory">Product Category:</label>
-    <select id="productCategory" name="productCategory" [(ngModel)]="product.category" required>
-      <option value="category1">Smarthphone</option>
-      <option value="category2">accessoire</option>
-      <option value="category3">Glass</option>
-      <option value="category3">Cases</option>
+    <select id="productCategory" name="productCategory" [(ngModel)]="product.categoryType" required>
+      <option value="1">Smarthphone</option>
+      <option value="2">accessoire</option>
+      <option value="3">Glass</option>
+      <option value="4">Cases</option>
       <!-- Add more categories as needed -->
     </select>
 
     <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" name="quantity" [(ngModel)]="product.quantity" required>
+    <input type="number" id="quantity" name="quantity" [(ngModel)]="product.productStock" required>
 
     <label for="price">Price:</label>
-    <input type="number" id="price" name="price" step="0.01" [(ngModel)]="product.price" required>
+    <input type="number" id="price" name="price" step="0.01" [(ngModel)]="product.productPrice" required>
 
     <label for="productCompany">Product Company:</label>
     <input type="text" id="productCompany" name="productCompany" [(ngModel)]="product.company" required>
@@ -28,7 +28,7 @@
     <input type="text" id="productStorage" name="productStorage" [(ngModel)]="product.storage" required>
 
     <label for="productDescription">Product Description:</label>
-    <textarea id="productDescription" name="productDescription" [(ngModel)]="product.description" required></textarea>
+    <textarea id="productDescription" name="productDescription" [(ngModel)]="product.productDescription" required></textarea>
 
     <label for="productImage">Product Image:</label>
     <input type="file" id="productImage" name="productImage" (change)="onFileSelected($event)" accept="image/*">

@@ -41,11 +41,11 @@
 
 <div class="el-wrapper" style="border-radius: 35px;" *ngFor="let product of products| search: searchText">
   <div class="box-up">
-    <img class="img" [src]="product.img" alt="">
+    <img class="img" [src]="product.productIcon" alt="">
     <div class="img-info">
       <div class="info-inner">
-        <span class="p-name">{{ product.name }}</span>
-        <span class="p-company">{{ product.company }}</span>
+        <span class="p-name">{{ product.productName }}</span>
+        <span class="p-company">{{ product.categoryType }}</span>
         <span><button (click)="opendetails(product)" style="background-color: yellow; color:black; border-radius:25px">More details ►</button></span>
       </div>
       <div class="a-size">Available : <span class="size">{{ product.storage }}</span></div>
@@ -58,7 +58,7 @@
     </div>
 
     <a class="cart">
-      <span class="price">${{ product.price }}</span>
+      <span class="price">${{ product.productPrice }}</span>
       <span class="add-to-cart">
         <span class="txt">Add to cart</span>
       </span>

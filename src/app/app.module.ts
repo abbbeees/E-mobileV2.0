@@ -47,6 +47,7 @@ import { SearchPipe } from './admin/allprod/search.pipe';
 import { AddprodComponent } from './admin/allprod/addprod/addprod.component';
 import { CasepopupComponent } from './trybbcck/casepopup/casepopup.component';
 import { UpdateprodComponent } from './admin/allprod/updateprod/updateprod.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -98,7 +99,8 @@ import { UpdateprodComponent } from './admin/allprod/updateprod/updateprod.compo
     MatNativeDateModule,
     MatDialogModule,
     MatCheckboxModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent,ProductsComponent]
