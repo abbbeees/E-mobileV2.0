@@ -22,4 +22,10 @@ export class ProductService {
       .then(product => product)
       .catch(error => alert("There was an error: "+error.message()));
   }
+  deleteProduct(id: number){
+    return this.http.delete<any>(BASIC_URL+"/delete/"+id);
+  }
+  updatProduct(product: any){
+    return this.http.put<any>(BASIC_URL+'/edit/'+product.productId,product);
+  }
 }

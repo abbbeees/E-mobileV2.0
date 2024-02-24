@@ -1,15 +1,17 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ProductService } from 'src/app/services/product.service';
 
 interface Product {
-  name: string;
-  category: string;
-  quantity: number;
-  price: number;
+  productName: string;
+  productPrice: number;
   company: string;
-  img: string;
+  categoryType: number;
+  productIcon: string;
   storage: string;
-  description: string;
+  productStock: number;
+  productDescription: string;
+  productStatus:number;
 }
 
 @Component({
@@ -18,9 +20,11 @@ interface Product {
   styleUrls: ['./updateprod.component.scss']
 })
 export class UpdateprodComponent {
+  image:any
+  
   product: Product; // Declare the property here, remove the duplicate declaration below
 
-  constructor(
+  constructor(private productService:ProductService,
     public dialogRef: MatDialogRef<UpdateprodComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Product // Use data instead of product
   ) {
@@ -29,7 +33,10 @@ export class UpdateprodComponent {
   }
 
   onSubmit() {
-    console.log('Form submitted:', this.product);
+    this.productService.updatProduct(this.product).subscribe((result)=>{
+      console.log("product updated");
+      
+    })
   }
 
   onFileSelected(event: any) {

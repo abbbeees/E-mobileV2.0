@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AddprodComponent } from './addprod/addprod.component';
 import { UpdateprodComponent } from './updateprod/updateprod.component';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { Inject } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 export interface Product {
   id: number;
   name: string;
@@ -21,15 +22,21 @@ export interface Product {
   styleUrls: ['./allprod.component.scss'],
   
 })
-export class AllprodComponent {
+export class AllprodComponent implements OnInit {
   searchText = '';
   id = 0;
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,private productService:ProductService) {}
+  ngOnInit(): void {
+   this.productService.getAllProducts().subscribe(
+    (result)=>{
+      this.data=result.content;
+    }
+   )
+  }
+
 
 data = [
-  { id: 1, category: 'smartphone', name: 'Iphone 14', quantity: 3, price: 1000, company:'apple', storage:'265GB', description:'iphoni al jamiil',img:''},
-  { id: 2, category: 'smartphone', name: 'Iphone 15 Pro Max', quantity: 15, price: 1500, company:'apple', storage:'512GB', description:'abcd',img:''},
-  { id: 3, category: 'accessoire', name: 'behringer Kit', quantity: 5, price: 1000, company:'behringer', storage:'0', description:'kit',img:'' },
+
 ];
 
 updateProduct(product: Product) {
@@ -39,7 +46,10 @@ updateProduct(product: Product) {
 
 
 deleteProduct(id: number) {
-  console.log('Delete Product with ID:',id);
+  this.productService.deleteProduct(id).subscribe((result)=>{
+    console.log('Delete Product with ID:',id);
+
+  })
 }
 
 addProducts(): void {
