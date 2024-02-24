@@ -31,7 +31,7 @@
     <textarea id="productDescription" name="productDescription" [(ngModel)]="product.productDescription" required></textarea>
 
     <label for="productImage">Product Image:</label>
-    <input type="file" id="productImage" name="productImage" (change)="onFileSelected($event)" accept="image/*">
+    <input type="file" id="productImage" name="productImage"[(ngModel)]="image"(change)="onFileSelected($event)" accept="image/*">
 
 
     <div style="display: flex; justify-content:center; align-items:center;">

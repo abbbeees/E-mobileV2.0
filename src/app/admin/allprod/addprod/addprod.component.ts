@@ -7,6 +7,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./addprod.component.scss']
 })
 export class AddprodComponent {
+  image:any ;
   product: Product = {
   productName: '',
   productPrice: 0,
@@ -19,25 +20,43 @@ export class AddprodComponent {
   productStatus:0
 
   };
+  
+  message: any;
+  imagePath: any;
+  imgURL: any;
 constructor(private productService:ProductService){
 }
 onSubmit() {
-  this,this.productService.createProduct(this.product).subscribe(
-    (result)=>{
-    console.log('Product added ');
-  },
-  (error)=>{
-    console.log('error when adding product');
-  }
-
-  )
+  this,this.productService.createProduct(this.product,this.image)
   console.log('Form submitted:', this.product);
 }
 
 onFileSelected(event: any) {
-  console.log('File selected:', event.target.files);
+  if (event.target.files.length > 0)
+  {
+    const file = event.target.files[0];
+    this.image = file;
+    // this.f['profile'].setValue(file);
+
+    var mimeType = event.target.files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported.";
+      return;
+    }
+
+    var reader = new FileReader();
+
+    this.imagePath = file;
+    reader.readAsDataURL(file);
+    reader.onload = (_event) => {
+      this.imgURL = reader.result;
+    }
+  }
+
+
 }
 }
+
 
 // Interface or model for the product
 interface Product {

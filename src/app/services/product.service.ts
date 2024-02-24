@@ -13,6 +13,13 @@ export class ProductService {
   getAllProducts(): Observable<any> {
     return this.http.get<any>(BASIC_URL)
   }
-  createProduct(Product: any) {
-    return this.http.post(BASIC_URL , Product)}
+  createProduct(product: any,file:File) {
+    const formData = new FormData();
+    formData.append('file', file);
+  
+    let id= this.http.post<any>(BASIC_URL ,product).toPromise()
+    .then(id => this.http.post<any>(BASIC_URL+"/image/"+id, formData).toPromise())
+      .then(product => product)
+      .catch(error => alert("There was an error: "+error.message()));
+  }
 }
