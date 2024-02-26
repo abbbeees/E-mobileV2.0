@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from '../products/products.component';
 const BASIC_URL = "http://localhost:8080/product";
 @Injectable({
   providedIn: 'root'

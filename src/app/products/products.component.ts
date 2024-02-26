@@ -3,18 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProdFilterComponent } from './prodfilter/prodfilter.component';
 import { ProddetComponent } from './proddet/proddet.component';
 import { ProductService } from '../services/product.service';
+import { Product } from '../models/Product';
 
-export interface Product {
-  productId: number;
-  productName: string;
-  productPrice: number;
-  company: string;
-  categoryType: string;
-  productIcon: string;
-  storage: string;
-  productStock: number;
-  productDescription: string;
-}
+
 
 @Component({
   selector: 'app-products',
@@ -62,3 +53,5 @@ export class ProductsComponent implements OnInit{
   }
 
 }
+export { Product };
+
